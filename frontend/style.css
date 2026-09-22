@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+
+/* Navigation */
+
+header {
+    position: sticky;
+    top: 0;
+    background: #0f172a;
+    border-bottom: 1px solid #334155;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 30px;
+}
+
+.hello {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+h1 {
+    font-size: 64px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #38bdf8;
+}
+
+.intro {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+
+/* Buttons */
+
+.buttons {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button.secondary {
+    background: transparent;
+    color: #e2e8f0;
+    border: 1px solid #64748b;
+}
+
+
+/* Sections */
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+
+    padding: 100px 30px;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+
+/* Skills */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills div {
+    padding: 10px 18px;
+
+    border: 1px solid #475569;
+    border-radius: 20px;
+}
+
+
+/* Project */
+
+.project-card {
+    border: 1px solid #334155;
+
+    padding: 30px;
+
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.technologies span {
+    padding: 6px 12px;
+
+    background: #1e293b;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid #334155;
+
+    color: #94a3b8;
+}
