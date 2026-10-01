@@ -1,3 +1,9 @@
+from fastapi import Depends
+from sqlalchemy.orm import Session
+
+from app.database import get_db
+from app.models import Project, Skill
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -34,17 +40,27 @@ def health():
     }
 
 @app.get("/api/projects")
-def get_projects():
+def get_projects(db: Session = Depends(get_db)):
+    projects = db.query(Project).all()
+
     return [
         {
-            "name": "Cloud-Native Portfolio & DevOps Platform",
-            "description": "A production-style cloud and DevOps project.",
-            "technologies": [
-                "AWS",
-                "Docker",
-                "Terraform",
-                "Kubernetes",
-                "GitHub Actions"
-            ]
+            "id": project.id,
+            "name": project.name,
+            "description": project.description,
+            "technologies": project.technologies.split(",")
         }
+        for project in projects
+    ]
+
+@app.get("/api/skills")
+def get_skills(db: Session = Depends(get_db)):
+    skills = db.query(Skill).order_by(Skill.id).all()
+
+    return [
+        {
+            "id": skill.id,
+            "name": skill.name
+        }
+        for skill in skills
     ]
