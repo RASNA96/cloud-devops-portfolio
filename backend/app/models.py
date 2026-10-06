@@ -15,3 +15,14 @@ class Skill(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(100), nullable=False)
+
+class Profile(Base):
+    __tablename__ = "profile"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String(100), nullable=False)
+    title = Column(String(200), nullable=False)
+    intro = Column(Text, nullable=False)
+    about = Column(Text, nullable=False)
+    email = Column(String(200), nullable=False)
+    github_url = Column(String(300), nullable=False)
